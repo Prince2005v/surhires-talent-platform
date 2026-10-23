@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-navy: #10243a;
+  --color-dark-navy: #0a1726;
+  --color-teal: #0f9d91;
+  --color-teal-hover: #087f75;
+  --color-teal-subtle: #e6f6f5;
+  --color-warm-white: #fafaf7;
+  --color-light-bg: #f1f5f4;
+  --color-body-text: #526171;
+  --color-border-subtle: #dce4e8;
+  --font-heading: var(--font-manrope), system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-navy: #10243a;
+  --dark-navy: #0a1726;
+  --teal: #0f9d91;
+  --teal-hover: #087f75;
+  --teal-subtle: #e6f6f5;
+  --warm-white: #fafaf7;
+  --light-bg: #f1f5f4;
+  --body-text: #526171;
+  --border-subtle: #dce4e8;
+  --white: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #fafaf7;
+  color: #10243a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom visual utility classes */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+/* Custom focus ring for high accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #0f9d91;
+  outline-offset: 2px;
+}
+
+/* Glassmorphism navbar background */
+.glass-nav {
+  background-color: rgba(250, 250, 247, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Subtle dot grid pattern for hero and sections */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(16, 36, 58, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
