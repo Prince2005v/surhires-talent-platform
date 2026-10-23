@@ -220,15 +220,17 @@ npx tsc --noEmit
 
 ## 🏆 Lighthouse Performance & Accessibility Scores
 
-Tested locally against the production server using headless Chrome Lighthouse:
+Tested locally against the production server using headless Chrome Mobile Lighthouse audit:
+
+![Lighthouse Mobile Audit Report](/lighthouse-report.png)
 
 | Metric | Score | Target | Result |
 |---|:---:|:---:|:---:|
-| **Performance** | **89** | 85+ | ✅ Pass |
+| **Performance** | **97** | 85+ | ✅ Pass |
 | **Accessibility** | **94** | 90+ | ✅ Pass |
-| **Best Practices** | **100** | 90+ | ✅ Pass |
+| **Best Practices** | **96** | 90+ | ✅ Pass |
 | **SEO** | **100** | 90+ | ✅ Pass |
-| **Agentic Browsing** | **100** | — | ✅ Pass |
+| **Agentic Browsing** | **2/2 (100%)** | — | ✅ Pass |
 
 ### Accessibility Highlights
 - **Semantic HTML5**: Native `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, and `<footer>` landmarks.
