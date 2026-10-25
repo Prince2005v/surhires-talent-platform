@@ -279,3 +279,4 @@ The application is architected for zero-configuration deployment on **Vercel**:
 - **Project**: Surhires Recruitment SaaS Marketing Platform
 - **Assignment**: Frontend Internship Selection Assignment — Meru Technosoft Private Limited
 - **Status**: Production Ready & Fully Implemented
+# surhires-talent-platform
